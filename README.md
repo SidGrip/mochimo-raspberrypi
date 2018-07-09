@@ -82,7 +82,7 @@ This guide requires mid-level Linux skill set. Beginner might find it hard to ke
 4. In case of errors, try to desactive `wlan0` with `sudo ifdown wlan0` and flush with `sudo ip addr flush dev wlan0`. Try (3) again
 5. Check `wlan0` status: `ip a`. You should see the ip of `wlan0`
 6. Unplug the RJ45 Ethernet cable
-7. Reboot the Pi with `sudo reboot` and cross finger
+7. Reboot the Pi with `sudo reboot` and cross fingers
 8. From your PC, try to ping the Pi on its wifi IP
 9. If you get ping reply, that means that your Pi rebooted and succesfully connected to the Wifi by itself. Congrats ! If not, repeat the process and double check each step
 10. Open a SSH connection to your Pi using the wifi IP
