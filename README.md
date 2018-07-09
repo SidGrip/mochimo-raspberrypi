@@ -18,7 +18,7 @@ Mochimo is one of the very few cryptocurrency for which Raspberrypi is a perfect
 
 ### Install & Configure the Pi
 
-This guide requires mid-level Linux skill set. Beginner might find it hard to keep up with. Do not hesitate to search online for the command or vocabulary you are not familiar with.
+This guide requires mid-level Linux skill set. Beginners might find it hard to keep up with. Do not hesitate to search online for the command or vocabulary you are not familiar with.
 
 
 ##### Install Hypriot OS 
