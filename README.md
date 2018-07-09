@@ -2,7 +2,7 @@
 [![Follow @Ortis95](https://img.shields.io/twitter/follow/Ortis95.svg?style=flat-square)](https://twitter.com/intent/follow?screen_name=Ortis95) 
 
 
-## A step by step guide for mining Mochimo on Raspberrypi
+## A complete setup to mining Mochimo on Raspberrypi
 
 This guide will walk you through the step of running several miner on a [Raspberrypi Model 3b+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/). Other model have been reported to work as well but it is recommended to stick with the 3b+. 
 
