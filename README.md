@@ -13,7 +13,7 @@ This guide will walk you through the step of running several miner on a [Raspber
 
 
 ### Why mining Mochimo on a Raspberrypi is great
-Mochimo is one of the very few cryptocurrency for which Raspberrypi is a perfect fit. On the Mochimo network, every node is a full, independent node. You don't have to trust a masternode or a reference node for your transaction, you only need to trust your own node. Even though a Mochimo node can synchronize with the network in a few minutes (!) it is better to have it always up and running. In addition, in order to enforce the '1 CPU = 1 Vote' philosophy of the Mochimo network, the mining process is based on an ASIC-resistant and GPU-soft-resistant (GPU mining does not bring extra hashing power). So even though your Raspberrypi will output less Haiku Per Second than the latest bananazillionHz CPU, you still get a very fair chance of solving block in the long run. All of that for a fraction of the price of a dedicated mining rig: Raspberrypi 3b+ ships for $50 including AC power cord & SD card and cost less $15 to run a full year (those numbers are estimates and can vary depending on vendor and power cost). 
+Mochimo is one of the very few cryptocurrency for which Raspberrypi is a perfect fit. On the Mochimo network, every node is a full, independent node. You don't have to trust a masternode or a reference node for your transaction, you only need to trust your own node. Even though a Mochimo node can synchronize with the network in a few minutes (!) it is better to have it always up and running. In addition, in order to enforce the '1 CPU = 1 Vote' philosophy of the Mochimo network, the mining process is based on an ASIC-resistant and GPU-soft-resistant (GPU mining does not bring extra hashing power). So even though your Raspberrypi will output less Haiku Per Second (HPS) than the latest *bananazillionHz* CPU, you still get a fair chance of solving block in the long run. All of that for a fraction of the price of a dedicated mining rig: Raspberrypi 3b+ ships for $50 including AC power cord & SD card and cost less $15 to run a full year (those numbers are estimates and can vary depending on vendor and power cost). 
 
 
 ### Install & Configure the Pi
@@ -31,7 +31,7 @@ This guide requires mid-level Linux skill set. Beginners might find it hard to k
 1. Download the latest [Hypriot release](https://blog.hypriot.com/downloads/)
 2. Flash the SD card with [Etcher](https://etcher.io/) (or an other flashing tool). Select the `.img` file from the Hypriot folder and press Flash!
 3. Install the SD card in the Raspberrypi, plug a RJ45 Ethernet cable and HDMI cable to access your Pi
-4. Plug the AC cord, the Pi will start
+4. Plug the AC cord **I strongly recommend using a Raspberrypi specific AC cord. The HPS difference between a specific power cord and a basic USB charger is quite significant**
 5. Wait for the booting process to complete. Hit Enter. You will be asked for a login then a password. Default login is `pirate`, default password `hypriot`
 6. *Optional*: Find the IP of your Pi: `ip a` (search for `eth0` interface). Open a SSH terminal to your Pi from you PC. You can unplug the screen from the Pi
 7. Update the `root` password: `sudo passwd root`
@@ -91,7 +91,7 @@ This guide requires mid-level Linux skill set. Beginners might find it hard to k
 
 ##### Set up Docker container
 
-Using [Docker](https://www.docker.com) containers will let us run several instance of Mochimo miner on the Pi and fully exploit its multicore capabilities.
+Using [Docker](https://www.docker.com) containers will let us run several instance of Mochimo miner on the Pi and fully exploit its multicore capabilities and maximize our HPS.
 
 1. Upload `mochimo-raspberrypi/image` and `mochimo-raspberrypi/compose` folder from this repository to the Pi in `/home/myuser`
 2. Step into `/home/myuser/mochimo-raspberrypi`: `cd /home/myuser/mochimo-raspberrypi` 
@@ -126,6 +126,7 @@ You can list existing containers with `sudo docker container ls` and delete a co
 7. Add the IP of `mochimo-master` `172.16.2.10` and remove the other entries. Start the miner with option `-q1`
 
 
+Use the [Mochimo Farm Manager](https://github.com/0rtis/mochimo-farm-manager) to monitor your Docker nodes and use the `lagPolicy` to keep them up to date with the network. 
 
 *Happy Mining !*
 
