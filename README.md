@@ -127,6 +127,9 @@ You can list existing containers with `sudo docker container ls` and delete a co
 
 
 
+*Happy Mining !*
+
+
 ### Donation
 Like the project ? Consider making a donation :) 
 
