@@ -71,12 +71,12 @@ This guide requires mid-level Linux skill set. Beginners might find it hard to k
 
 	auto wlan0
 	iface wlan0 inet static
-   		address STATIC_IP
-   		netmask 255.255.255.0
-   		gateway YOUR_GATEWAY
-   		wpa-essid YOUR_SSID
-   		wpa-psk YOUR_SSID_PASSWORD
-   		dns-nameservers 8.8.8.8 YOUR_GATEWAY
+   	    address STATIC_IP
+   	    netmask 255.255.255.0
+   	    gateway YOUR_GATEWAY
+   	    wpa-essid YOUR_SSID
+   	    wpa-psk YOUR_SSID_PASSWORD
+   	    dns-nameservers 8.8.8.8 YOUR_GATEWAY
     ```      
 3. Activate newly created `wlan0` interface: `sudo ifup wlan0`
 4. In case of errors, try to desactive `wlan0` with `sudo ifdown wlan0` and flush with `sudo ip addr flush dev wlan0`. Try (3) again
