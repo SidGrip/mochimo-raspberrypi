@@ -86,7 +86,7 @@ This guide requires mid-level Linux skill set. Beginners might find it hard to k
 8. From your PC, try to ping the Pi on its wifi IP (be patient, the Pi takes a few minutes to reboot)
 9. If you get ping reply, that means that your Pi rebooted and succesfully connected to the Wifi by itself. Congrats ! If not, repeat the process and double check each step
 10. Open a SSH connection to your Pi using the wifi IP
-11. Check that the dns server a correctly configured: `sudo ping www.google.com`. You should get some ping reply.
+11. Check that the dns server is correctly configured: `sudo ping www.google.com`. You should get some ping reply.
 
 
 ##### Set up Docker container
