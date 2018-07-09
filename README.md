@@ -95,7 +95,7 @@ Using [Docker](https://www.docker.com) containers will let us run several instan
 
 1. Upload `mochimo-raspberrypi/image` and `mochimo-raspberrypi/compose` folder from this repository to the Pi in `/home/myuser`
 2. Step into `/home/myuser/mochimo-raspberrypi`: `cd /home/myuser/mochimo-raspberrypi` 
-3. Build the Docker image `mochinode`: `sudo docker build -t mochinode` (This may take several minutes. Be patient)
+3. Build the Docker image `mochinode`: `sudo docker build -t mochinode .` (This may take several minutes. Be patient)
 4. Check if `mochinode` image have been built: `sudo docker images` (should list `mochinode`)
 5. Create a `mochimo-shared` directory: `sudo mkdir /mochimo-shared`. This folder will be shared across our Docker instances
 6. Set permission: `sudo chmod 777 mochimo-shared`
