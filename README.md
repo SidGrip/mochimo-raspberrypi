@@ -79,7 +79,7 @@ This guide requires mid-level Linux skill set. Beginners might find it hard to k
    	    dns-nameservers 8.8.8.8 YOUR_GATEWAY
     ```      
 3. Activate newly created `wlan0` interface: `sudo ifup wlan0`
-4. In case of errors, try to desactive `wlan0` with `sudo ifdown wlan0` and flush with `sudo ip addr flush dev wlan0`. Try (3) again
+4. In case of errors, try to desactivate `wlan0` with `sudo ifdown wlan0` and flush with `sudo ip addr flush dev wlan0`. Try (3) again
 5. Check `wlan0` status: `ip a`. You should see the ip of `wlan0`
 6. Unplug the RJ45 Ethernet cable
 7. Reboot the Pi with `sudo reboot` and cross fingers
