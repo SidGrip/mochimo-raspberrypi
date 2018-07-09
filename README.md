@@ -30,7 +30,7 @@ This guide requires mid-level Linux skill set. Beginner might find it hard to ke
 
 1. Download the latest [Hypriot release](https://blog.hypriot.com/downloads/)
 2. Flash the SD card with [Etcher](https://etcher.io/) (or an other flashing tool). Select the `.img` file from the Hypriot folder and press Flash!
-3. Install the SD card in the Raspberry pi, plug a RJ45 Ethernet cable and HDMI cable to access your Pi
+3. Install the SD card in the Raspberrypi, plug a RJ45 Ethernet cable and HDMI cable to access your Pi
 4. Plug the AC cord, the Pi will start
 5. Wait for the booting process to complete. Hit Enter. You will be asked for a login then a password. Default login is `pirate`, default password `hypriot`
 6. *Optional*: Find the IP of your Pi: `ip a` (search for `eth0` interface). Open a SSH terminal to your Pi from you PC. You can unplug the screen from the Pi
@@ -83,7 +83,7 @@ This guide requires mid-level Linux skill set. Beginner might find it hard to ke
 5. Check `wlan0` status: `ip a`. You should see the ip of `wlan0`
 6. Unplug the RJ45 Ethernet cable
 7. Reboot the Pi with `sudo reboot` and cross fingers
-8. From your PC, try to ping the Pi on its wifi IP
+8. From your PC, try to ping the Pi on its wifi IP (be patient, the Pi takes a few minutes to reboot)
 9. If you get ping reply, that means that your Pi rebooted and succesfully connected to the Wifi by itself. Congrats ! If not, repeat the process and double check each step
 10. Open a SSH connection to your Pi using the wifi IP
 11. Check that the dns server a correctly configured: `sudo ping www.google.com`. You should get some ping reply.
@@ -113,7 +113,7 @@ Using [Docker](https://www.docker.com) containers will let us run several instan
 You can list existing containers with `sudo docker container ls` and delete a container with `sudo docker rm -f CONTAINER_ID`
 
 
-#### Mining on Docker container
+#### Mining in Docker container
 
 1. Connect to `mochimo-master` container: `ssh root@localhost:220`
 2. Copy the Mochimo-miner archive to the local directory: `cp -p /mochimo-shared/MOCHIMO-MINER.targz ~`
