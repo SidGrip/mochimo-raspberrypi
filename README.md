@@ -26,7 +26,7 @@ This guide requires mid-level Linux skill set. Beginner might find it hard to ke
 [Hypriot](https://github.com/hypriot/image-builder-rpi) is a Linux distribution optimized for [Docker](https://www.docker.com/).
 
 
-*Hypriot is a CLI only distribution. If you need a Graphical Environment (aka Desktop), I successfully ran a similar setup on [Raspex](https://sourceforge.net/projects/raspex/). Note that Raspex does not comes with pre installed Docker package, you will need to install it yourserlf. Also, Graphical Desktop have a non negligible cost of both CPU & RAM that might impact your HPS.*
+*Hypriot is a CLI only distribution. If you need a Graphical Environment (aka Desktop), I successfully ran a similar setup on [Raspex](https://sourceforge.net/projects/raspex/). Note that Raspex does not comes with pre installed Docker package, you will need to install it yourself. Also, Graphical Desktop have a non negligible cost for both CPU & RAM that might impact your HPS.*
 
 1. Download the latest [Hypriot release](https://blog.hypriot.com/downloads/)
 2. Flash the SD card with [Etcher](https://etcher.io/) (or an other flashing tool). Select the `.img` file from the Hypriot folder and press Flash!
