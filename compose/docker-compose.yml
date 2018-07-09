@@ -1,0 +1,48 @@
+version: '3'
+services:
+  master:
+    image: mochinode:latest
+    container_name: mochimo-master
+    hostname: mochimo-master
+    volumes:
+      - /mochimo-shared:/mochimo-shared
+    command: /etc/init.d/ssh start && bin/bash
+    tty: true
+    ports:
+      - 0.0.0.0:2095:2095
+      - 0.0.0.0:220:22  
+    networks:
+      mochimo-public:
+        ipv4_address: 172.16.1.10
+      mochimo-private:
+        ipv4_address: 172.16.2.10
+    restart: "no"
+  slave:
+    image: mochinode:latest
+    container_name: mochimo-slave
+    hostname: mochimo-slave
+    volumes:
+      - /mochimo-shared:/mochimo-shared
+    command: /etc/init.d/ssh start && bin/bash
+    tty: true
+    ports:
+      - 0.0.0.0:221:22
+    networks:
+      mochimo-public:
+        ipv4_address: 172.16.1.11
+      mochimo-private:
+        ipv4_address: 172.16.2.11
+    restart: "no"
+  
+networks:
+  mochimo-public:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.1.0/24
+  mochimo-private:
+    driver: bridge
+    internal: true
+    ipam:
+      config:
+        - subnet: 172.16.2.0/24

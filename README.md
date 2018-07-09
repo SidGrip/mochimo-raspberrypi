@@ -18,7 +18,7 @@ Mochimo is one of the very few cryptocurrency for which Raspberrypi is a perfect
 
 ### Install & Configure the Pi
 
-This guide requires mid-level Linux skill set. Beginners might find it hard to keep up with. Do not hesitate to search online for the command or vocabulary you are not familiar with.
+This guide requires mid-level Linux skill set and experience in running a Mochimo node. Beginners might find it hard to keep up with. Do not hesitate to search online for the command or vocabulary you are not familiar with and ask help to the Mochimo community.
 
 
 ##### Install Hypriot OS 
@@ -104,9 +104,9 @@ Using [Docker](https://www.docker.com) containers will let us run several instan
 9. Step into `/home/myuser/mochimo-raspberrypi/compose`: `cd /home/myuser/mochimo-raspberrypi/compose`
 9. Start Docker containers: `sudo docker-compose up -d`
 10. Check if the containers are listening in port 220 and 221: `netstat -anp | grep LISTEN | grep 22`
-11. Connect to `mochimo-master` container: `ssh root@localhost:220` with default password `password`
+11. Connect to `mochimo-master` container: `ssh root@localhost:220` with default password `toor`
 12. Change `root` password: `passwd root`.
-13. Connect to `mochimo-slave`: `ssh root@localhost:221` with default password `password`
+13. Connect to `mochimo-slave`: `ssh root@localhost:221` with default password `toor`
 14. Change `root` password: `passwd root`.
 
 
@@ -126,7 +126,7 @@ You can list existing containers with `sudo docker container ls` and delete a co
 7. Add the IP of `mochimo-master` `172.16.2.10` and remove the other entries. Start the miner with option `-q1`
 
 
-Use the [Mochimo Farm Manager](https://github.com/0rtis/mochimo-farm-manager) to monitor your Docker nodes and use the `lagPolicy` to keep them up to date with the network. 
+Use the [Mochimo Farm Manager](https://github.com/0rtis/mochimo-farm-manager) to monitor your Docker nodes and use the `restartPolicies` to keep them up to date with the network. 
 
 *Happy Mining !*
 
